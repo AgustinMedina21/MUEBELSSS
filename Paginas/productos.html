@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - MUEBELS</title>
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
     <header>
@@ -13,54 +15,96 @@
             <ul>
                 <li><a href="#">Productos</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
+                <li id="carrito-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="carrito-count">0</span>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <div id="carrito-panel">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito">
+            
+        </ul>
+        <p class="total">Total: $<span id="total-carrito">0.00</span></p>
+        <button id="cerrar-carrito">Cerrar</button>
+    </div>
+
     <main class="productos-page">
         <aside class="filtros">
             <h2>Filtrar por:</h2>
-            <ul>
-                <li><a href="#">Categoría</a></li>
-                <li><a href="#">Precio</a></li>
-                <li><a href="#">Color</a></li>
-                <li><a href="#">Material</a></li>
-            </ul>
+            <form id="filtros-form">
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Seleccione...</option>
+                    <option value="rack">Rack</option>
+                    <option value="cajonera">Cajonera</option>
+                    <option value="mesa">Mesa</option>
+                </select>
+        
+                <label for="precio">Precio:</label>
+                <select id="precio" name="precio">
+                    <option value="">Seleccione...</option>
+                    <option value="menor_100">$0 - $100</option>
+                    <option value="100_200">$100 - $200</option>
+                    <option value="mayor_200">$200+</option>
+                </select>
+        
+                <label for="color">Color:</label>
+                <select id="color" name="color">
+                    <option value="">Seleccione...</option>
+                    <option value="negro">Negro</option>
+                    <option value="blanco">Blanco</option>
+                    <option value="madera">Madera</option>
+                </select>
+        
+                <label for="material">Material:</label>
+                <select id="material" name="material">
+                    <option value="">Seleccione...</option>
+                    <option value="madera">Madera</option>
+                    <option value="metal">Metal</option>
+                    <option value="plastico">Plástico</option>
+                </select>
+            </form>
         </aside>
-
+        
         
         <section class="catalogo">
-            <div class="card">
+            <div class="card" data-categoria="cajonera" data-precio="99.99" data-color="madera" data-material="madera">
                 <img src="../img/cajonera.jpg" alt="Producto 1">
                 <p class="precio">$99.99</p>
-                <button>Agregar</button>
+                <button data-nombre="Cajonera" data-precio="99.99">Agregar</button>
             </div>
-            <div class="card">
+            <div class="card" data-categoria="cajonera" data-precio="129.99" data-color="blanco" data-material="metal">
                 <img src="../img/cajonera2.jpg" alt="Producto 2">
                 <p class="precio">$129.99</p>
-                <button>Agregar</button>
+                <button data-nombre="Cajonera Deluxe" data-precio="129.99">Agregar</button>
             </div>
-            <div class="card">
-                <img src="../img/mesa3.jpg" alt="Producto 1">
+            <div class="card" data-categoria="mesa" data-precio="99.99" data-color="blanco" data-material="madera">
+                <img src="../img/mesa3.jpg" alt="Producto 3">
                 <p class="precio">$99.99</p>
-                <button>Agregar</button>
+                <button data-nombre="Mesa" data-precio="99.99">Agregar</button>
             </div>
-            <div class="card">
-                <img src="../img/mesa4.jpg" alt="Producto 2">
+            <div class="card" data-categoria="mesa" data-precio="129.99" data-color="negro" data-material="metal">
+                <img src="../img/mesa4.jpg" alt="Producto 4">
                 <p class="precio">$129.99</p>
-                <button>Agregar</button>
+                <button data-nombre="Mesa Grande" data-precio="129.99">Agregar</button>
             </div>
-            <div class="card">
-                <img src="../img/rack.jpg" alt="Producto 1">
+            <div class="card" data-categoria="rack" data-precio="99.99" data-color="negro" data-material="metal">
+                <img src="../img/rack.jpg" alt="Producto 5">
                 <p class="precio">$99.99</p>
-                <button>Agregar</button>
+                <button data-nombre="Rack" data-precio="99.99">Agregar</button>
             </div>
-            <div class="card">
-                <img src="../img/rack2.jpg" alt="Producto 2">
+            <div class="card" data-categoria="rack" data-precio="129.99" data-color="madera" data-material="madera">
+                <img src="../img/rack2.jpg" alt="Producto 6">
                 <p class="precio">$129.99</p>
-                <button>Agregar</button>
+                <button data-nombre="Rack Deluxe" data-precio="129.99">Agregar</button>
             </div>
         </section>
     </main>
+    <script src="../carrito.js"></script>
+    <script>src="../filtros.js"</script>
 </body>
 </html>

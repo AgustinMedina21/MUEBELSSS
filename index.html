@@ -13,9 +13,23 @@
             <ul>
                 <li><a href="Paginas/productos.html">Productos</a></li>
                 <li><a href="Paginas/nosotros.html">Nosotros</a></li>
+                <li id="carrito-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="carrito-count">0</span>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <div id="carrito-panel">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito">
+            
+        </ul>
+        <p class="total">Total: $<span id="total-carrito">0.00</span></p>
+        <button id="cerrar-carrito">Cerrar</button>
+    </div>
+
 
     <main>
     <section id="inicio" class="hero">
@@ -102,5 +116,6 @@
                 </div>
             </div>
     </footer>
+    <script src="../carrito.js"></script>
 </body>
 </html>
