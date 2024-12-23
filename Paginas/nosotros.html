@@ -35,44 +35,80 @@
 
 
     <main>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Como se realizan las entregas?
-                </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                    Confirmada la compra, el vendedor se comunicara con usted para coordinar la entrega, todos los envios tiene costo, entregamos de lunes a viernes y los dias de lluvia se suspende la entrega.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Donde puedo retirar mi compra?
-                </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                    Podes retirar tu compra en cualquiera de las direcciones que se muestran en la seccion de contacto.
-                    </div>
-                </div>
-            </div>
+        <!-- Section: About Us -->
+        <section id="about-us">
+            <h2>Sobre Nosotros</h2>
+            <p>MUEBELS es una empresa comprometida con ofrecer muebles de alta calidad para el hogar y la oficina. Nuestra misión es transformar espacios con diseños innovadores y funcionales.</p>
+            <p>Con más de 10 años en el mercado, nos destacamos por nuestra atención personalizada y la satisfacción de nuestros clientes.</p>
+        </section>
+
+        <!-- Section: FAQs -->
+        <section id="faqs">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Cual es el tiempo de entrega?
-                    </button>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cómo se realizan las entregas?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Confirmada la compra, el vendedor se comunicará con usted para coordinar la entrega. Todos los envíos tienen costo y se realizan de lunes a viernes. Los días de lluvia, las entregas se suspenden.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Dónde puedo retirar mi compra?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Puede retirar su compra en cualquiera de las direcciones mostradas en la sección de contacto. Por favor, coordine previamente con nuestro equipo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Cuál es el tiempo de entrega?
+                        </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                        El tiempo de entrega puede variar dependiendo de la ubicacion y el peso de la compra.
+                            El tiempo de entrega puede variar dependiendo de la ubicación y el peso del pedido. Usualmente toma entre 3 y 7 días hábiles.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Qué métodos de pago aceptan?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Aceptamos pagos mediante tarjetas de crédito, débito y transferencias bancarias. También puede pagar en efectivo al retirar su pedido en nuestra tienda física.
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Section: Customer Support -->
+        <section id="customer-support">
+            <h2>Atención al Cliente</h2>
+            <p>¿Necesita ayuda? Nuestro equipo está disponible para resolver sus dudas y ofrecerle soporte en cada etapa de su compra. Puede contactarnos a través de nuestro correo electrónico o llamarnos directamente.</p>
+            <ul>
+                <li>Email: soporte@muebels.com</li>
+                <li>Teléfono: +54 11 2345 6789</li>
+            </ul>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

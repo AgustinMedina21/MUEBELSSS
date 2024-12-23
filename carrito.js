@@ -7,9 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalCarrito = document.getElementById('total-carrito');
     const carritoCount = document.getElementById('carrito-count');
 
-    let carrito = []; // Array para almacenar los productos seleccionados
+    let carrito = [];
 
-    // Mostrar/ocultar el panel del carrito
     carritoIcon.addEventListener('click', () => {
         carritoPanel.classList.toggle('abierto');
     });
@@ -18,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         carritoPanel.classList.remove('abierto');
     });
 
-    // Agregar productos al carrito
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', () => {
             const nombre = boton.getAttribute('data-nombre');
@@ -36,21 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Actualizar el carrito en el panel
     function actualizarCarrito() {
-        // Limpiar la lista actual
         listaCarrito.innerHTML = '';
 
-        // Calcular el total
         let total = 0;
         carrito.forEach(producto => {
             total += producto.precio * producto.cantidad;
 
-            // Crear el elemento del producto
             const item = document.createElement('li');
             item.textContent = `${producto.nombre} x${producto.cantidad} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
 
-            // Botón para eliminar el producto
             const botonEliminar = document.createElement('button');
             botonEliminar.textContent = 'Eliminar';
             botonEliminar.addEventListener('click', () => {
@@ -61,12 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
             listaCarrito.appendChild(item);
         });
 
-        // Actualizar el total y contador
         totalCarrito.textContent = total.toFixed(2);
         carritoCount.textContent = carrito.reduce((sum, producto) => sum + producto.cantidad, 0);
     }
 
-    // Eliminar un producto del carrito
     function eliminarProducto(nombre) {
         carrito = carrito.filter(producto => producto.nombre !== nombre);
         actualizarCarrito();
